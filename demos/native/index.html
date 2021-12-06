@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Date Input Native Demo</title>
+</head>
+<body>
+    <label>
+        Next Version
+        <input type="text" class="input">
+    </label>
+    <script type="module">
+      import { useDateInput } from '../../index-refactoring.js';
+      const {
+        handleInput,
+      } = useDateInput();
+      document.querySelector('.input').addEventListener('input', (e) => {
+        e.target.value = handleInput(e.target.value);
+      });
+    </script>
+</body>
+</html>
