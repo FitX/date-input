@@ -4,7 +4,7 @@
   "description": "Shared Date Input Code",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Michael Raguse",
   "license": "ISC",
