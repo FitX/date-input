@@ -1,5 +1,5 @@
 {
-  "name": "date-input",
+  "name": "@fitx/date-input",
   "version": "1.0.0",
   "description": "Shared Date Input Code",
   "main": "index.js",
