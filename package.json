@@ -4,7 +4,8 @@
   "description": "Shared Date Input Code",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test:unit": "jest",
+    "test": "npm run test:unit"
   },
   "author": "Michael Raguse",
   "license": "ISC",

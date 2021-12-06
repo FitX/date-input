@@ -28,7 +28,7 @@ const removeUndefinedFromObject = (obj) => Object.keys(obj).forEach(key => obj[k
  * @return {DateObject}
  */
 export const getDateByLanguage = (dateString, lang = 'de') => {
-  if (!dateString) throw new Error('dateString is Required');
+  // if (!dateString) throw new Error('dateString is Required');
   if (!SUPPORTED_LANGUAGES.includes(lang)) throw new Error(`${lang} is not a supported Language`);
   const dateObject = {
     day: '',
