@@ -16,7 +16,8 @@
   "scripts": {
     "test:unit": "jest",
     "test": "npm run test:unit",
-    "dev": "vite",
+    "dev:native": "vite serve demos/native",
+    "dev:svelte": "cd demos/svelte && npm run start",
     "build": "vite build",
     "preview": "vite preview"
   },
