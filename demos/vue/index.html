@@ -22,17 +22,29 @@
 <div id="app"></div>
 <!--<script src="https://unpkg.com/vue@next"></script>-->
 <!-- https://wicg.github.io/import-maps/#import-map -->
-<script type="importmap">
-  {
-    'imports': {
-      'vue': 'https://cdn.jsdelivr.net/npm/vue@3/dist/vue.esm-browser.js',
-    }
-  }
-</script>
 <script type="module">
-  import { createApp } from 'vue';
+  import { createApp } from 'https://cdn.jsdelivr.net/npm/vue@3/dist/vue.esm-browser.js';
   export const vue = createApp({
-    template: /*html*/`<div></div>`
+    setup() {
+      const format = 'TT.MM.JJJJ';
+      return {
+        format,
+      }
+    },
+    template: /*html*/`
+<div>
+  <label>
+    Input Format {{ format }}
+    <input type="text" />
+  </label>
+
+  <label>
+    Input Filled
+    <input
+      value="11.08.1984"
+      type="text" />
+  </label>
+</div>`
   });
   if (document.getElementById('app')) {
     vue.mount('#app')
