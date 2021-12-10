@@ -3,6 +3,7 @@ Shared Date Input Code for different Framework Integration
 
 ## Demo / Playground
 - [vanilla](https://codepen.io/webdesignberlin/pen/xxXEXMq)
+- [svelte](https://svelte.dev/repl/30d75419f4fb43cc844d709e75c95d4f)
 
 #+ Unit Tests
 We use jest:
