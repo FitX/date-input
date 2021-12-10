@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Date Input Vue Demo</title>
+    <style>
+        input {
+            display: block;
+            margin: 0.6rem 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+<div id="app"></div>
+<!--<script src="https://unpkg.com/vue@next"></script>-->
+<!-- https://wicg.github.io/import-maps/#import-map -->
+<script type="importmap">
+  {
+    'imports': {
+      'vue': 'https://cdn.jsdelivr.net/npm/vue@3/dist/vue.esm-browser.js',
+    }
+  }
+</script>
+<script type="module">
+  import { createApp } from 'vue';
+  export const vue = createApp({
+    template: /*html*/`<div></div>`
+  });
+  if (document.getElementById('app')) {
+    vue.mount('#app')
+  }
+</script>
+</body>
+</html>
