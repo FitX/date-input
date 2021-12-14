@@ -24,18 +24,23 @@
 <!-- https://wicg.github.io/import-maps/#import-map -->
 <script type="module">
   import { createApp } from 'https://cdn.jsdelivr.net/npm/vue@3/dist/vue.esm-browser.js';
+  import { useDateInput } from '/../../index.mjs';
   export const vue = createApp({
     setup() {
       const format = 'TT.MM.JJJJ';
+      const {
+        handleInput,
+      } = useDateInput();
       return {
         format,
+        handleInput,
       }
     },
     template: /*html*/`
 <div>
   <label>
     Input Format {{ format }}
-    <input type="text" />
+    <input @input="(e) => e.target.value = handleInput(e.target.value)" type="text" />
   </label>
 
   <label>
