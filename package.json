@@ -17,9 +17,9 @@
   "scripts": {
     "test:unit": "jest",
     "test": "npm run test:unit",
-    "dev:native": "vite serve demos/native",
+    "dev:native": "vite serve demos/native --port 5554",
     "dev:svelte": "cd demos/svelte && npm run start",
-    "dev:vue": "vite serve demos/vue",
+    "dev:vue": "vite serve demos/vue --port 5556",
     "build": "vite build",
     "preview": "vite preview"
   },
