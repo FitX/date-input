@@ -7,7 +7,7 @@
     "index.mjs"
   ],
   "main": "./dist/index.es.js",
-  "module": "./dist/index.es.js",
+  "module": "index.mjs",
   "exports": {
     ".": {
       "import": "./dist/index.es.js",
@@ -37,5 +37,9 @@
   "bugs": {
     "url": "https://github.com/FitX/date-input/issues"
   },
-  "homepage": "https://github.com/FitX/date-input#readme"
+  "homepage": "https://github.com/FitX/date-input#readme",
+  "dependencies": {
+    "@babel/core": "^7.16.5",
+    "babel-jest": "^27.4.5"
+  }
 }

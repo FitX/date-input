@@ -1,9 +1,17 @@
 module.exports = {
   moduleFileExtensions: [
     'js',
-  ],
+    'mjs',
+  ], /*
   transform: {
-    '^.+\\.jsx?$': 'babel-jest'
+    '^.+\\.mjs$': 'babel-jest'
+  }, */
+  transform: {
+    "^.+\\.jsx?$": "babel-jest",
+    '^.+\\.mjs$': 'babel-jest'
   },
+  testPathIgnorePatterns: [
+    '/node_modules/',
+  ],
   collectCoverage: true,
 }

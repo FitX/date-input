@@ -30,7 +30,6 @@ export const useDateInput = () => {
     if (prevValue.length < newVal.length) {
       const newChar = newVal.slice(newVal.length - 1);
       if (allowedKeys.indexOf(newChar) === -1) {
-        console.log('delete');
         newVal = newVal.slice(0, newVal.length - 1);
       } else {
         if (newChar === '.') {
@@ -53,15 +52,11 @@ export const useDateInput = () => {
           switch (newVal.length) {
             case 2:
             case 5:
+              console.log('newVal.length', newVal.length);
               newVal = `${newVal}.`;
               break;
             case 3:
             case 6:
-              console.log('case 3 6',
-                newVal,
-                newChar,
-                 `${newVal.slice(0, newVal.length -1)}.${newChar}`,
-              );
               newVal = `${newVal.slice(0, newVal.length -1)}.${newChar}`;
               break;
           }
@@ -70,7 +65,6 @@ export const useDateInput = () => {
     }
     newVal = newVal.slice(0, 10);
     prevValue = newVal;
-    console.log('prevValue', prevValue);
     return newVal;
   }
   return {
