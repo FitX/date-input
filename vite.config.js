@@ -5,7 +5,8 @@ const pkg = require('./package.json');
 module.exports = defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'index.js'),
+      formats: ['es', 'cjs', 'umd'],
+      entry: path.resolve(__dirname, 'index.mjs'),
       name: pkg.name,
       fileName: (format) => `index.${format}.js`
     },
